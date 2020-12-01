@@ -1,0 +1,25 @@
+{
+    "name": "Human_Portrait_Drawing Inference",
+    "arch": {
+        "type": "U2NET",
+        "args": {
+            "in_ch": 3,
+            "out_ch": 1
+        }
+    },
+    "best_model": "/data/changqing/Human_Portrait_Pytorch/model_logs/U2NET/1125_210759/best_model.pth",
+    "input_mode": "image",
+    "input_path": "./samples/inputs/boy3.jpeg",
+    "output_dir": "./samples/outputs/",
+    "temp_dir": "./samples/temp/",
+    "face_detection": true,
+    "face_model_path": "./face_detect/haarcascade_frontalface_default.xml",
+    "infer_loader": {
+        "root_dir": "",
+        "is_train": true,
+        "shuffle": true,
+        "batch_size": 16,
+        "n_workers": 16,
+        "pin_memory": true
+    }
+}

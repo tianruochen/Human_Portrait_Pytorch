@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "disable_exist_logger": false,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s-%(levelname)s:-%(filename)s-%(lineno)s-%(message)s"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+        "file_handler": {
+            "class": "logging.FileHandler",
+            "level": "INFO",
+            "formatter": "simple",
+            "filename": "../model_logs/info.log"
+        }
+    },
+    "loggers": {
+        "my_module":{
+            "level":"ERROR",
+            "handlers":["file_handler"],
+            "propagate":"no"
+        }
+    },
+
+    "root":{
+        "level":"INFO",
+        "handlers":["console","file_handler"]
+    }
+}
