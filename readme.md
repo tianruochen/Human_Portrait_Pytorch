@@ -49,12 +49,14 @@ python train.py --config config_path --resume checkpoint_path
 
 ## inference
 best model(10.10.101.15): 
-- /data/changqing/Human_Portrait_Pytorch/model_logs/U2NET/1125_210759/best_model.pth
+/data/changqing/Human_Portrait_Pytorch/model_logs/U2NET/1125_210759/best_model.pth
+
 > use default params
-```angular2 
+``` 
 python inference.py
 ```     
+
 > use specific config file
-```angular2
+```
 python inference.py --path ./configs/infer_config.json   
 ```
